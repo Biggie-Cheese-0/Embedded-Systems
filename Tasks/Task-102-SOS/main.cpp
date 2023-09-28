@@ -20,20 +20,74 @@ int main()
     //Repeat everything "forever" (until the power is removed or the chip is reset)
     while (true)
     {
+        // (C,D,E,F,G,A,B,C)
         //On for 500ms
         greenLED = 1;
         buzz.playTone("C");
-        wait_us(WAIT_TIME_MS * 1000);  //500ms
-
-
-        //Off for 500ms
-        greenLED = 0;
-        buzz.playTone("C", Buzzer::HIGHER_OCTAVE);
-        wait_us(WAIT_TIME_MS * 1000);  //500ms
-
-        //Pause
+        wait_us(WAIT_TIME_MS * 150);  //500ms
         buzz.rest();
-        wait_us(WAIT_TIME_MS * 1000);
+        wait_us(WAIT_TIME_MS * 10);
+
+        greenLED = 0;
+        buzz.playTone("C");
+        wait_us(WAIT_TIME_MS * 150);
+        buzz.rest();
+        wait_us(WAIT_TIME_MS * 10);
+
+        greenLED = 1;
+        buzz.playTone("C");
+        wait_us(WAIT_TIME_MS * 150);
+        buzz.rest();
+        wait_us(WAIT_TIME_MS * 10);
+
+        buzz.rest();
+        wait_us(WAIT_TIME_MS * 150);
+
+        greenLED = 0;
+        buzz.playTone("C");
+        wait_us(WAIT_TIME_MS * 450);  //500ms
+        buzz.rest();
+        wait_us(WAIT_TIME_MS * 10);
+        
+        greenLED = 1;
+        buzz.playTone("C");
+        wait_us(WAIT_TIME_MS * 450);  //500ms
+        buzz.rest();
+        wait_us(WAIT_TIME_MS * 10);
+
+        greenLED = 1;
+        buzz.playTone("C");
+        wait_us(WAIT_TIME_MS * 450);  //500ms
+        buzz.rest();
+        wait_us(WAIT_TIME_MS * 10);
+
+        buzz.rest();
+        wait_us(WAIT_TIME_MS * 150);
+
+        greenLED = 0;
+        buzz.playTone("C");
+        wait_us(WAIT_TIME_MS * 150);  //500ms
+        buzz.rest();
+        wait_us(WAIT_TIME_MS * 10);
+
+        greenLED = 1;
+        buzz.playTone("C");
+        wait_us(WAIT_TIME_MS * 150);
+        buzz.rest();
+        wait_us(WAIT_TIME_MS * 10);
+
+        greenLED = 0;
+        buzz.playTone("C");
+        wait_us(WAIT_TIME_MS * 150);
+        buzz.rest();
+        wait_us(WAIT_TIME_MS * 10);
+
+        buzz.rest();
+        wait_us(WAIT_TIME_MS * 10000);
+
+        
+        
+
 
     }
 }
