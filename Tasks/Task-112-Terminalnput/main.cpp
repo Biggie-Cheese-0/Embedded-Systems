@@ -22,25 +22,42 @@ int main()
     c2 = getchar();
     printf("You entered character %c which has the ASCII code %d\n", c2, c2);
 
+
+
+
+
+
+
+
     //scanf
-    printf("\n\nTo set the delay (in ms), type in an integer number and press return\n");
-    int delay_ms;
-    int parsed = scanf("%d", &delay_ms);
+    printf("\n\nEnter an on time (ms) and press return\n");
+    int delay_ms1;
+    int parsed = scanf("%d", &delay_ms1);
     
-    printf("You entered %d correct integer values. The value was %dms\n", parsed, delay_ms);
+    printf("You entered %d correct integer values. The value was %dms\n", parsed, delay_ms1);
 
-    // Stop
     while (parsed > 0) {
-        wait_us(delay_ms * 1000);
-        led1 = 1;
-        led2 = 1;
-        led3 = 1;
-        wait_us(delay_ms * 1000);
-        led1 = 0;
-        led2 = 0;
-        led3 = 0;        
-    } 
+        //off time
+        printf("\n\nEnter an off time (ms) and press return\n");
+        int delay_ms2;
+        int parsed2 = scanf("%d", &delay_ms2);
+        
+        printf("You entered %d correct integer values. The value was %dms\n", parsed, delay_ms2);
 
+        // Stop
+        while (parsed2 > 0) {
+            wait_us(delay_ms2 * 1000);
+            led1 = 1;
+            led2 = 1;
+            led3 = 1;
+            wait_us(delay_ms1 * 1000);
+            led1 = 0;
+            led2 = 0;
+            led3 = 0;        
+        } 
+        while(1);
+        printf("incorrect off time restart and try again");
+    }
     printf("Invalid - please restart and try again\n");
     while(1);    
 }

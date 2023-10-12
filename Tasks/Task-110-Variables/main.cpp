@@ -24,11 +24,11 @@ int main()
     printf("\nTASK-110\n");
 
     // Integer
-    int count = 0;
+    int count = 10;
     printf("count = %d\n", count);
 
     // Add one to count
-    count = count + 1;
+    count = count + 2;
     printf("New value of count = %d\n", count);
 
     // Char
@@ -43,7 +43,7 @@ int main()
     printf("add 1 and shortCount is %hd\n", shortCount);
 
     // Long long
-    long long NN = 0x12345678ABCD0001LL; //Literal in HEX
+    long long NN = 0x12345678ABCD0001; //Literal in HEX
     printf("A very large number %lld\n", NN);
     printf("A very large number in hex %llX\n", NN);
 
@@ -69,7 +69,7 @@ int main()
     printf("Size of a long long is %d bytes\n", sizeof(long long));
     printf("Size of a float is %d bytes\n", sizeof(float));
     printf("Size of a double is %d bytes\n", sizeof(double));
-
+    printf("This is a new line");
     // Stop
     while (true);   
 }
