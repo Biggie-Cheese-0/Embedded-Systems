@@ -11,13 +11,13 @@ int main()
     while (true) {
 
         //Wait for a press
-        while (ButtonA==0) { };
+        while ((ButtonA==1) || (BlueButton==1));
 
         //Toggle LED
         redLED = !redLED;
 
         //Wait for release
-        while (ButtonA==1) { };
+        while ((ButtonA==0) && (BlueButton==0));
     }
 }
 

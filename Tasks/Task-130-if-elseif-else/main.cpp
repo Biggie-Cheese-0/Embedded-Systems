@@ -34,6 +34,7 @@ int main()
             count = count + 1;            //Increment count
             disp = count;       //Update display
         }
+        
 
         // Slow it down a bit (and debounce the switches)
         wait_us(100000);  
