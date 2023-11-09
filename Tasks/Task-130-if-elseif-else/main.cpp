@@ -42,3 +42,12 @@ int main()
 }
 
 
+//if (<conditionA>) {
+    //Block A
+//}
+
+//else if (<conditionB>) {
+    //Block B
+//}
+
+//...next statement...
